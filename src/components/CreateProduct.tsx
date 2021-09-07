@@ -43,7 +43,7 @@ const CreateProduct: React.FC<CreateProductProps> = ({ closeDialog }) => {
 						<Dropdown>
 							<Dropdown.Toggle variant="outline-secondary">{priorityLabels[priority]}</Dropdown.Toggle>
 							<Dropdown.Menu>
-								<Dropdown.Item sele onClick={() => setPriority(ProductPriority.Low)}>Low</Dropdown.Item>
+								<Dropdown.Item onClick={() => setPriority(ProductPriority.Low)}>Low</Dropdown.Item>
 								<Dropdown.Item onClick={() => setPriority(ProductPriority.Medium)}>Medium</Dropdown.Item>
 								<Dropdown.Item onClick={() => setPriority(ProductPriority.High)}>High</Dropdown.Item>
 							</Dropdown.Menu>
