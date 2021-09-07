@@ -1,0 +1,6 @@
+.list-container {
+	display: grid;
+	grid-gap: 10px;
+	grid-template-columns: repeat(auto-fit, minmax($product-container-width, 1fr));
+	padding: 10px;
+}

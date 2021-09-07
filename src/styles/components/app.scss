@@ -1,0 +1,21 @@
+$panels-bg: #4f5a6e;
+$body-bg: #f6f7f7;
+$thumbnail-bg: white;
+$thumbnail-bg-hover: #E1DFF0;
+
+#root {
+	display: grid;
+	grid-template-areas: "sidebar main";
+	grid-template-columns: 200px 1fr;
+	min-width: 400px;
+
+	.sidebar {
+		grid-area: sidebar;
+		background-color: $panels-bg;
+	}
+
+	.main {
+		grid-area: main;
+		background-color: $body-bg;
+	}
+}

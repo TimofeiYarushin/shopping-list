@@ -1,0 +1,33 @@
+$product-container-width: 200px;
+
+.product-container {
+    position: relative;
+    width: $product-container-width;
+    height: 200px;
+    background-color: $thumbnail-bg;
+    border-radius: 5px;
+    padding: 10px;
+
+    .delete-button {
+        position: absolute;
+        text-align: center;
+        width: 30px;
+        height: 30px;
+        top: 0px;
+        right: 0px;
+        opacity: 0;
+    }
+
+    .delete-button:hover {
+        color: white;
+        cursor: pointer;
+    }
+}
+
+.product-container:hover {
+    background-color: $thumbnail-bg-hover;
+
+    .delete-button {
+        opacity: 1;
+    }
+}
