@@ -1,5 +1,7 @@
-import { takeEvery, fork, delay, select, put } from 'redux-saga/effects'
+import { takeEvery, fork, delay, select, put } from 'redux-saga/effects';
+
 import { Actions, ActionTypes } from './actions';
+
 import { ApplicationState, ProductsState } from '../types';
 
 const key = 'productsState';

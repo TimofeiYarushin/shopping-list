@@ -1,10 +1,12 @@
+import React from 'react';
 import { useDispatch } from 'react-redux';
 import { Button } from 'react-bootstrap';
 
 import { Actions } from '../store/actions';
-import SortingProducts from './SortingProducts';
 
-const Sidebar: React.FC = () => {
+import { SortingProducts } from './SortingProducts';
+
+export const Sidebar: React.FC = () => {
 	const dispatch = useDispatch();
 
 	return (
@@ -14,5 +16,3 @@ const Sidebar: React.FC = () => {
 		</div>
 	);
 }
-
-export default Sidebar;

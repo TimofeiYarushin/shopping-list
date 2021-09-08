@@ -1,16 +1,21 @@
-import { useEffect, useCallback } from 'react';
+import React, { useEffect, useCallback } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { Dropdown } from 'react-bootstrap';
 
 import { SortBy, Direction, ApplicationState } from '../types';
 import { Actions } from '../store/actions';
 
-const SortingProducts: React.FC = () => {
+export const SortingProducts: React.FC = () => {
 	const dispatch = useDispatch();
 	const { sortBy, direction } = useSelector((state: ApplicationState) => state.products.sorting);
 
-	const defaultSorting = useCallback(() => { dispatch(Actions.sortBy('date', 'desc')) }, [dispatch]);
-	useEffect(() => { defaultSorting() }, [defaultSorting]);
+	const defaultSorting = useCallback(() => {
+		dispatch(Actions.sortBy('date', 'desc'))
+	}, [dispatch]);
+
+	useEffect(() => {
+		defaultSorting()
+	}, [defaultSorting]);
 
 	const setSorting = (sortBy: SortBy, direction: Direction) => () => dispatch(Actions.sortBy(sortBy, direction));
 
@@ -30,5 +35,3 @@ const SortingProducts: React.FC = () => {
 		</Dropdown>
 	);
 }
-
-export default SortingProducts;

@@ -1,17 +1,18 @@
-import { useState } from 'react';
+import React, { useState } from 'react';
 import { useDispatch } from 'react-redux';
 import { Modal, Button, Form, InputGroup, FormControl, Dropdown } from 'react-bootstrap';
-import moment from "moment";
+import moment from 'moment';
 
-import { ProductPriority } from '../types'
+import { ProductPriority } from '../types';
 import { Actions } from '../store/actions';
+
 import { modalDialog } from './ModalDialog';
-import { priorityLabels } from './componentHelpers'
+import { priorityLabels } from './componentHelpers';
 
 type CreateProductProps = {
 	closeDialog: () => void;
 };
-const CreateProduct: React.FC<CreateProductProps> = ({ closeDialog }) => {
+export const CreateProduct: React.FC<CreateProductProps> = ({ closeDialog }) => {
 	const dispatch = useDispatch();
 	const [name, setName] = useState('');
 	const [count, setCount] = useState(0);
@@ -60,5 +61,3 @@ const CreateProduct: React.FC<CreateProductProps> = ({ closeDialog }) => {
 }
 
 export const CreateProductModalDialog = modalDialog(CreateProduct);
-
-export default CreateProduct;
