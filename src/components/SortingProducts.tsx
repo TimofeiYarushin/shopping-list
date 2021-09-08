@@ -25,7 +25,7 @@ export const SortingProducts: React.FC = () => {
 
 	return (
 		<Dropdown>
-			<Dropdown.Toggle variant="outline-secondary" id="dropdown-basic">{sortLabel}</Dropdown.Toggle>
+			<Dropdown.Toggle variant="secondary" id="dropdown-basic">{sortLabel}</Dropdown.Toggle>
 			<Dropdown.Menu>
 				<Dropdown.Item onClick={setSorting('date', 'asc')}>Date Ascending</Dropdown.Item>
 				<Dropdown.Item onClick={setSorting('date', 'desc')}>Date Descending</Dropdown.Item>
