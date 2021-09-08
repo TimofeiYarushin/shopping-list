@@ -6,6 +6,8 @@ import { ApplicationState } from '../types';
 import { Actions } from '../store/actions';
 
 type ModalDialogProps<P> = Omit<P, 'closeDialog'>;
+
+// eslint-disable-next-line
 export const modalDialog = <P extends Record<string, any>>(Editor: React.ComponentType<P>) => (props: ModalDialogProps<P>) => {
 	const dispatch = useDispatch();
 	const isShowing = useSelector((state: ApplicationState) => state.showingCreateProductModalDialog);

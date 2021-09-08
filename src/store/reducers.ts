@@ -90,7 +90,7 @@ const removeFromOrder: Reducer<ProductsState, ActionType<typeof Actions['removeF
 	return sortBy(updState, Actions.sortBy(state.sorting.sortBy, state.sorting.direction));
 };
 
-const applyAppState: Reducer<ProductsState, ActionType<typeof Actions['applyProductsState']>> = (state = initProductsState, { payload: { state: restoredState } }) => restoredState;
+const applyAppState: Reducer<ProductsState, ActionType<typeof Actions['applyProductsState']>> = (_, { payload: { state: restoredState } }) => restoredState;
 
 export const productsReducer = createReducer(initProductsState)
 	.handleAction(ActionTypes.DELETE_PRODUCT, deleteProduct)
