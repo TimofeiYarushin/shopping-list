@@ -40,9 +40,9 @@ export const ProductThumbnail: React.FC<ProductListProps> = ({ product, inOrder 
 				<span>In cart: </span>
 				<input type="checkbox" checked={inOrder} onChange={changeProductList} />
 			</div>
-			<div className="delete-button" onClick={deleteProduct}>
+			{!inOrder && <div className="delete-button" onClick={deleteProduct}>
 				<i className="bi bi-x"></i>
-			</div>
+			</div>}
 		</div>
 	);
 }
